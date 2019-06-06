@@ -28,22 +28,21 @@ with open(budget_file, newline="") as csvfile:
     print("Total Months: " + str(len(months)))
     print("Total Profits: $"+ str(sum(profits)))
 
-def avg_change(profits):
-    profit_sum = sum(profits)
-    return profit_sum/len(profits)
 
-#print("Average Change: " +str(avg_change(profits)))
+#making a list of all changes - take value of next row, subtract current row, to check for change
+change = []
+for i in profits:
+    change.append((i+1)-i)
+print(change) #i's cancel and it keeps showing one, need to fix
 
-    #for i in profits:
-        #average_change = (i + (i+1))/2
-
-    #print(average_change)
+#get average change by adding all values, and dividing by # of values.
+avg_change = sum(change)/len(change)
+print(avg_change)
 
 out = open("budget_summ.txt","w+")
-
-out.write("Total Months: " + str(len(months))+"\n")
-out.write("Total Profits: $" + str(sum(profits))+"\n")
-out.write("Average Profits: $" + str(avg_change(profits))+"\n")
+out.write("Total Months: " + str(len(months)) +"\n")
+out.write("Total Profits: $" + str(sum(profits)) +"\n")
+out.write("Average Profits: $" + str(avg_change) +"\n")
 
 
 
