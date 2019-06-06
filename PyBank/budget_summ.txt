@@ -1,0 +1,3 @@
+Total Months: 86
+Total Profits: $38382578
+Average Profits: $446309.0465116279
