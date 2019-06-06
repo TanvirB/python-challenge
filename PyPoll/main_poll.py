@@ -40,22 +40,6 @@ elif otooley_v >= khan_v + correy_v + li_v:
 else:
     print("No Majority")
 
-
-
-
-
-#if election_df["Candidate"] == "Khan":
- #   khan_count = +1
-#elif election_df["Candidate"] == "Correy":
- #   correy_count = +1
-#elif election_df["Candidate"] == "Li":
- #   li_count = +1
-#elif election_df["Candidate"] == "Tooley":
- #   tooley_count = +1
-
-#print(khan_count)
-
-
 out = open("election_summ.txt","w+")
 
 out.write("Election Results"+"\n----------------------\n")
